@@ -6,15 +6,9 @@ import Job from '../Job/Job';
 
 const Home = () => {
     const jobsData = useLoaderData()
-    const [showJob, setShowJob] = useState([])
     const [categoryData, setCategoryData] = useState([])
-
-
-    const slicedData = jobsData.slice(0, 4);
-    // setShowJob(slicedData)
-    const handleSeeAllJob = () => {
-        // setShowJob(jobsData)
-    }
+    const [showAll, setshowAll] = useState(false)
+    
     useEffect(() => {
         fetch('jobCategory.json')
             .then(res => res.json())
@@ -42,15 +36,19 @@ const Home = () => {
                 <p className='text-center small-texts my-5'>
                     Explore thousands of job opportunities with all the information you need. Its your future
                 </p>
-                <div className='grid grid-cols-1 md:grid-cols-2 px-28 gap-4 job-container'>
+                <div className='grid grid-cols-1 md:grid-cols-2 px-10 md:px-28 gap-4 job-container'>
                         {
-                            jobsData.map(job => <Job key={job.id}
+                        showAll === true
+                            ? jobsData.map(job => <Job key={job.id}
+                            job={job}
+                            ></Job>)
+                            : jobsData.slice(0, 4).map(job => <Job key={job.id}
                                 job={job}
                             ></Job>)
                         }
                 </div>
                 <div className='text-center my-5'>
-                    <button onClick={handleSeeAllJob} className='common-btn px-5 py-3'>See All Jobs</button>
+                    <button onClick={()=>setshowAll(true)} className='common-btn px-5 py-3'>See All Jobs</button>
                 </div>
             </div>
         </div>
