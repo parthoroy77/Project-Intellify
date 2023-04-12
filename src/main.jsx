@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Layout from './components/Layout/Layout'
@@ -9,6 +8,7 @@ import AppliedJobs from './components/AppliedJobs/AppliedJobs'
 import Blogs from './components/Blogs/Blogs'
 import Statistic from './components/Statistic/Statistic'
 import JobDetails from './components/JobDetails/JobDetails'
+import jobDetails from './components/Loader/jobloader'
 
 const router = createBrowserRouter([
   {
@@ -33,8 +33,9 @@ const router = createBrowserRouter([
         element: <Statistic></Statistic>
       },
       {
-        path: 'jobdetails',
-        element: <JobDetails></JobDetails>
+        path: 'jobdetails/:id',
+        element: <JobDetails></JobDetails>,
+        loader: async ({ params }) => jobDetails(params.id)
       }
     ]
   }

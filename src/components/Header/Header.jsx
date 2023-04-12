@@ -10,7 +10,7 @@ const Header = () => {
                 <h3 className='text-3xl font-bold text-blue-700'>Intellify</h3>
             </Link>
             <nav className={`md:static absolute duration-500 ${open ? 'top-16 bg-blue-100 rounded-lg text-center px-4 py-3 right-8 flex-col' : '-top-48 right-8'}`}>
-                <Link to='/'>Home</Link>
+                <a href='/'>Home</a>
                 <Link to='/statistic'>Statistic</Link>
                 <Link to='/appliedjobs'>Applied Jobs</Link>
                 <Link to='/blogs'>Blogs</Link>

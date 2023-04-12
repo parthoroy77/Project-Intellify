@@ -25,7 +25,7 @@ const Job = ({ job }) => {
                     </p>
                 </div>
             </div>
-            <Link to='/jobdetails'>
+            <Link to={`/jobdetails/${id}`}>
                 <button className='common-btn px-5 py-2' style={{ width: '157px' }}>View Details</button>
             </Link>
         </div>

@@ -1,0 +1,13 @@
+.left-side{
+    height: 450px;
+}
+.left-side h4{
+    font-weight: bold;
+    font-size: 21px;
+    margin: 24px 0;
+}
+.right-side{
+    background: linear-gradient(90deg, rgba(126, 144, 254, 0.1) 0%, rgba(152, 115, 255, 0.1) 100%);
+    border-radius: 8px;
+    height: 450px;
+}
