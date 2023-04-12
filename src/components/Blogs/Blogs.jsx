@@ -9,19 +9,20 @@ const Blogs = () => {
                     <div className='question-container px-6 py-8 rounded-xl card shadow-xl shadow-2xl rounded-xl'>
                         <h3>1. What is Context API</h3>
                         <p><span style={{ color: 'green' }}>Ans:</span>
-                            
+                            Context API is a method of sending props to children component. When we build a webpage that page has many nested component making website interactive. We need to send props to children component but when there are many components it is difficult to send props. Context Api store some data as state that can be pass any children component.
                         </p>
-                        <h3>2. How Does UseState Work?</h3>
+                        <h3>2. What is custom Hook?</h3>
                         <p><span style={{ color: 'green' }}>Ans:</span>
-                            "UseState" is a react hook it is used for storing the component current state for making website more interactive. "UseState" return two value in a array, first value is present state and second value is a function to set the current value on the state.
+                            Custom Hook is a JavaScript reuseable function. When we need to use a function many time or share logic between other JavaScript function we can create a custom hook by ourselves and use it several times.
                         </p>
-                        <h3>3. What is the purpose of use effect other than fetching data?</h3>
+                        <h3>3. What is useReff?</h3>
                         <p><span style={{ color: 'green' }}>Ans:</span>
-                            "UseEffect" is a react hook to manage side effect of website after the component render. UseEffect can handle many things other than fetching data like Manipulating DOM: UseEffect can manipulate DOM in depend on a condition or dependencies then update the UI. It can handle event listener effect on specific behavior or animation effect, component mounting unmounting and many more. UseEffect hook make component more flexible and versatile.
+                            "UseReff" is react hook that accept only one argument as initial value and returns a ref object. This object has a special property (.current). UseReff 
+                            used used to create reference object and this ref used to access and assign DOM nodes inside the render method
                         </p>
-                        <h3>4. How Does React Work?</h3>
+                        <h3>4. What is useMemo</h3>
                         <p><span style={{ color: 'green' }}>Ans:</span>
-                            React is a component based modular JavaScript libraries for building UI. React build every part of UI by component. It create a virtual DOM which a lightweight copy of real DOM. When in DOM a small piece is updated React doesn't re-render the full UI it compare virtual DOM and real DOM which part is changed and identify the part then update the small part in real DOM by DIFF algorithm. In this method is the full website doesn't need to refresh so that user can get a optimal experience.
+                            "UseMemo" is a react Hook. This hook used to optimized the code while render. It cache or memorize the value between rendering. When we re render react component render from the begging that is time consumed and un optimized so useMemo memorize some data the that helps to render faster. 
                         </p>
                     </div>
                 </div>
