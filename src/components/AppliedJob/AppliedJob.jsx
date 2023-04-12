@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const AppliedJob = ({ data, handleOnsiteJobs, handleRemoteJobs }) => {
     const { fulltime_or_parttime, location, remote_or_onsite, company_logo, id, job_title, salary, company_name } = data;
     return (
-        <div className='applied-job-container my-3 flex gap-3 items-center'>
+        <div className='applied-job-container my-3 flex flex-col md:flex-row gap-3 items-center'>
             <div className='h-36 w-36 flex justify-center items-center' style={{
                 background: '#F4F4F4',
                 borderRadius: '8px'}}>

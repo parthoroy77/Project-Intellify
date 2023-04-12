@@ -4,7 +4,7 @@ const Blogs = () => {
     return (
         <div>
             <div className='my-10'>
-                <h3 className='text-center text-3xl'>Question and Answer Section</h3>
+                <h3 className='text-center text-3xl px-4'>Question and Answer Section</h3>
                 <div className='flex justify-center my-7'>
                     <div className='question-container px-6 py-8 rounded-xl card shadow-xl shadow-2xl rounded-xl'>
                         <h3>1. What is Context API</h3>

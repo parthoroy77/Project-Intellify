@@ -16,16 +16,20 @@ const Statistic = () => {
         { name: 'a-8', result: 60 },
     ]
     return (
-        <div className=' flex justify-center items-center' style={{height: '700px'}}>
+        <div className=' flex justify-center items-center' style={{height: '400px', width: '100%'}}>
             <div>
-                <RadarChart
-                width={1000} height={500}    cx="50%" cy="50%" outerRadius="80%" data={assignmentData}>
-                    <PolarGrid />
-                    <Tooltip></Tooltip>
-                    <PolarAngleAxis dataKey="name" />
-                    <PolarRadiusAxis />
-                    <Radar name="Mike" dataKey="result" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
-                </RadarChart>
+                <h1 className='text-4xl fond-bold text-center mb-4'> 
+                    Radar Chart
+                </h1>
+
+                    <RadarChart
+                        width={400} height={250} cx="50%" cy="50%" outerRadius="80%" data={assignmentData}>
+                        <PolarGrid />
+                        <Tooltip></Tooltip>
+                        <PolarAngleAxis dataKey="name" />
+                        <PolarRadiusAxis />
+                        <Radar name="Mike" dataKey="result" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
+                    </RadarChart>
             </div>
         </div>
     );
