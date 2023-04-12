@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "img": "https://imagizer.imageshack.com/img923/6776/vSO1s2.png",
+    "name": "Engineering Job",
+    "jobsAvailable": 100
+  },
+  {
+    "id": 2,
+    "img": "https://imagizer.imageshack.com/img924/5314/aQF4bW.png",
+    "name": "Account & Finance",
+    "jobsAvailable": 523
+  },
+  {
+    "id": 3,
+    "img": "https://imagizer.imageshack.com/img924/6784/S3nIya.png",
+    "name": "Marketing & Sales",
+    "jobsAvailable": 856
+  },
+  {
+    "id": 4,
+    "img": "https://imagizer.imageshack.com/img922/3017/OG45kg.png",
+    "name": "Creative Design",
+    "jobsAvailable": 300
+  }
+]
