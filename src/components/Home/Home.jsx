@@ -1,9 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import Banner from '../Banner/Banner';
 import JobCategory from '../JobCategory/JobCategory';
+import { useLoaderData } from 'react-router-dom';
+import Job from '../Job/Job';
 
 const Home = () => {
+    const jobsData = useLoaderData()
+    const [showJob, setShowJob] = useState([])
     const [categoryData, setCategoryData] = useState([])
+
+
+    const slicedData = jobsData.slice(0, 4);
+    // setShowJob(slicedData)
+    const handleSeeAllJob = () => {
+        // setShowJob(jobsData)
+    }
     useEffect(() => {
         fetch('jobCategory.json')
             .then(res => res.json())
@@ -17,13 +28,29 @@ const Home = () => {
                 <p className='text-center small-texts my-5'>
                     Explore thousands of job opportunities with all the information you need. Its your future
                 </p>
-                <div className='flex gap-4 justify-center'>
+                <div className='flex flex-col md:flex-row gap-4 justify-center px-3'>
                     {
                         categoryData.map(item => <JobCategory
                             key={item.id}
                             item={item}
                         ></JobCategory>)
                     }
+                </div>
+            </div>
+            <div>
+                <h2 className='text-center font-bold text-4xl'>Featured Jobs</h2>
+                <p className='text-center small-texts my-5'>
+                    Explore thousands of job opportunities with all the information you need. Its your future
+                </p>
+                <div className='grid grid-cols-1 md:grid-cols-2 px-28 gap-4 job-container'>
+                        {
+                            jobsData.map(job => <Job key={job.id}
+                                job={job}
+                            ></Job>)
+                        }
+                </div>
+                <div className='text-center my-5'>
+                    <button onClick={handleSeeAllJob} className='common-btn px-5 py-3'>See All Jobs</button>
                 </div>
             </div>
         </div>

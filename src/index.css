@@ -10,3 +10,18 @@
 .common-bg{
     background: linear-gradient(90deg, rgba(126, 144, 254, 0.05) 0%, rgba(152, 115, 255, 0.05) 100%);
 }
+.common-btn{
+    background: linear-gradient(90deg, #7E90FE 0%, #9873FF 100%);
+        border-radius: 8px;
+        color: white;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+}
+
+.remote-fulltime-btn{
+    border: 1px solid #7E90FE;
+    padding: 10px 19px;
+    border-radius: 6px;
+    margin-right: 10px;
+}
