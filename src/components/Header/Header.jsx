@@ -12,7 +12,7 @@ const Header = () => {
             <nav className={`md:static absolute duration-500 ${open ? 'top-16 bg-blue-100 rounded-lg text-center px-4 py-3 right-8 flex-col' : '-top-48 right-8'}`}>
                 <a href='/'>Home</a>
                 <Link to='/statistic'>Statistic</Link>
-                <Link to='/appliedjobs'>Applied Jobs</Link>
+                <a href='/appliedjobs'>Applied Jobs</a>
                 <Link to='/blogs'>Blogs</Link>
             </nav>
             <button className='px-4 py-2'>Start Applying</button>

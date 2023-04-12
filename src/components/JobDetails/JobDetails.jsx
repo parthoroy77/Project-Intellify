@@ -3,10 +3,14 @@ import { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import './JobDetails.css'
 import { BeakerIcon, CalendarIcon, CurrencyDollarIcon, EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/solid'
+import { addToDb } from '../../utilities/fakedb';
+
+
+
 const JobDetails = () => {
     const [job, setJob] = useState(useLoaderData())
-    const { job_description, job_title, salary, job_responsibility, educational_requirements, experiences } = job;
-    const {} = job
+    const { job_description,id, job_title, salary, job_responsibility, educational_requirements, experiences } = job;
+    const handleApplyNow = (id) => addToDb(id);
     return (
         <div className='flex w-full px-12 md:px-28 my-16'>
             <div className='w-3/5 left-side p-4'>
@@ -51,7 +55,7 @@ const JobDetails = () => {
                     <span className='mx-2 font-bold'>Location:</span>
                     {job_title}
                 </p>
-                <button className='common-btn w-full py-3'>Apply Now</button>
+                <button onClick={()=>handleApplyNow(id)} className='common-btn w-full py-3'>Apply Now</button>
             </div>
         </div>
     );
