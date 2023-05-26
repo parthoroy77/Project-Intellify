@@ -15,15 +15,25 @@ const AppliedJobs = () => {
         }
         setAppliedData([...newArr])
     }, [])
-    console.log(appliedData);
     const handleRemoteJobs = () => {
-        
-        const filteredData = appliedData.filter(e => e.remote_or_onsite === 'Remote')
-        setAppliedData([...filteredData])
+        let newArr = [];
+        const getFromLocalStorage = getShoppingCart();
+        for (const id in getFromLocalStorage) {
+            const appliedJob = jobs.filter(data => data.id == id)
+            newArr.push(...appliedJob)
+        }
+        const filteredData = newArr.filter(e => e.remote_or_onsite === 'Remote')
+        setAppliedData(filteredData)
     } 
     const handleOnsiteJobs = () => {
-        const filteredData = appliedData.filter(e => e.remote_or_onsite !== 'Remote')
-        setAppliedData([...filteredData])
+        let newArr = [];
+        const getFromLocalStorage = getShoppingCart();
+        for (const id in getFromLocalStorage) {
+            const appliedJob = jobs.filter(data => data.id == id)
+            newArr.push(...appliedJob)
+        }
+        const filteredData = newArr.filter(e => e.remote_or_onsite !== 'Remote')
+        setAppliedData(filteredData)
     }
     return (
         <div className='mt-12 px-12 md:px-28'>
